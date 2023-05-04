@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Irish Grover', cursive;
+  color: var(--grey);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* colors */
+:root {
+  --grey: #222;
+  --yellow : #FFE600;
+  --dark-blue: #495B5F;
+  --light-blue: #9BA69B;
+  --red : #7D4A45;
+  --white : #EFE8E3;
+
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header::before {
+  content: "";
+  display: block;
+  padding-bottom: calc(100% * (1642 / 1102));
+  background: url(./assets/img/background-image.jpg) no-repeat center center;
+  background-size: cover;
 }
