@@ -6,9 +6,7 @@ import './App.css';
 function App() {
   return (
     <div >
-      <header>
         <HeaderSection />
-      </header>
       <main>
         <YellowSection />
       </main>

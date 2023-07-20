@@ -26,5 +26,23 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.header-title, .header-title-duplicate {
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: var(--yellow);
+  display: flex;
+  width: 30%;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  top: 200px;
+  right: 0;
+  padding: 1rem;
+}
+
+.header-title > * {
+  margin: 0 1rem;
 }
