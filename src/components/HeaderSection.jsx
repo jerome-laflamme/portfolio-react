@@ -8,14 +8,14 @@ export default function HeaderSection() {
         <motion.div
           className="header-title"
           animate={{
-            x: [0, window.innerWidth], // initial state, final state
+            x: [-600, 650], // initial state, final state
             rotate: 0,
             scale: 1,
           }}
           transition={{
-            duration: 4,
+            duration: 5,
+            ease: "linear",
             repeat: Infinity,
-            repeatType: "reverse",
           }}
         >
           <h1>JEROME</h1>
@@ -33,7 +33,20 @@ export default function HeaderSection() {
           </div>
           <h1>portfolio</h1>
         </motion.div>
-        <motion.div className="header-title-duplicate">
+        {/* <motion.div
+          className="header-title-duplicate"
+          animate={{
+            x: [-600, 650], // initial state, final state
+            rotate: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 5,
+            delay: 2.55,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
           <h1>JEROME</h1>
           <h1>LAFLAMME</h1>
           <div>
@@ -48,7 +61,7 @@ export default function HeaderSection() {
             </svg>
           </div>
           <h1>portfolio</h1>
-        </motion.div>
+        </motion.div> */}
       </div>
     </header>
   );

@@ -1,8 +1,12 @@
+import '../assets/main.css'
 import me from "../assets/img/me.jpg";
+
+// Icons
 import PhoneIcon from "@mui/icons-material/Phone";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import CodeIcon from "@mui/icons-material/Code";
 import CollectionsIcon from "@mui/icons-material/Collections";
+
 
 export default function YellowSection() {
   const listData = [
@@ -39,9 +43,10 @@ export default function YellowSection() {
           })}
         </div>
       </div>
-      <div className="text-area">
+      <div className="text-container">
       <h2>Profil</h2>
-          <div>
+      <hr />
+          <div className='text-area'>
             <p>
               Développeur full-stack de formation, je me passionne pour l’art et
               le design.
@@ -59,7 +64,7 @@ export default function YellowSection() {
               Effects, Premiere Pro
             </p>
             <div className="color-palette-container">
-              <span></span>
+              <span className=""></span>
               <span></span>
               <span></span>
               <span></span>
