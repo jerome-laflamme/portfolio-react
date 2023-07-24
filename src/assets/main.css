@@ -38,12 +38,13 @@ h1 {
   background-color: var(--yellow);
   z-index: 1;
   position: fixed;
-  top: 200px;
+  top: 10vh;
   right: 0;
-  width: 30%;
+  width: 650px;
   height: 10vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .header-title, .header-title-duplicate {
   display: flex;
@@ -53,7 +54,6 @@ h1 {
   height: 100%;
   position: absolute;
   margin-left: 5rem;
-  overflow: hidden;
 }
 
 .header-title > *, .header-title-duplicate > * {
@@ -77,8 +77,11 @@ h1 {
 }
 
 .info-item {
-  margin: 1rem 0;
   display: flex;
+}
+
+.info-item > * {
+  margin: 0 0.5rem;
 }
 
 
@@ -93,12 +96,11 @@ img {
 .text-container {
   width: 50%;
   padding: 10rem 3rem;
-  margin-top: 200px;
 }
 
 hr {
   border: 1.5px solid var(--grey);
-  margin: 1rem 0;
+  margin: 2rem 0;
   width: 70%;
   transform: translateX(-10%)
 }
@@ -109,5 +111,37 @@ hr {
 
 p {
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
+}
+
+.bolder {
+  font-weight: 650;
+}
+
+.color-palette-container {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  margin-top: 5%;
+}
+
+.square {
+  width: 60px;
+  height: 40px;
+}
+
+.dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.light-blue {
+  background-color: var(--light-blue);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.white {
+  background-color: var(--white);
 }

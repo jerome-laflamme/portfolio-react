@@ -6,9 +6,18 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import CodeIcon from "@mui/icons-material/Code";
 import CollectionsIcon from "@mui/icons-material/Collections";
+import { useEffect } from 'react';
 
 
 export default function YellowSection() {
+
+  // log on scroll position
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      console.log(window.scrollY)
+    })
+  }, [])
+
   const listData = [
     {
       icon: <PhoneIcon />,
@@ -38,13 +47,14 @@ export default function YellowSection() {
               <div key={index} className="info-item">
                 <div className="info-icon">{item.icon}</div>
                 <div className="info-text">{item.text}</div>
+                
               </div>
             );
           })}
         </div>
       </div>
       <div className="text-container">
-      <h2>Profil</h2>
+      <h2>profil</h2>
       <hr />
           <div className='text-area'>
             <p>
@@ -58,16 +68,16 @@ export default function YellowSection() {
               technologies et j'ai une soif de les apprendre. Les défis sont de
               mises pour me garder stimulé et intéressé.
             </p>
-            <p>
+            <p className='bolder'>
               Expérience : JS, TS, React, Vue, CSS, HMTL, Three.JS, C#, MySQL,
               MongoDB, Node.JS, Blender, Figma, Photoshop, Illustrator, After
               Effects, Premiere Pro
             </p>
             <div className="color-palette-container">
-              <span className=""></span>
-              <span></span>
-              <span></span>
-              <span></span>
+              <span className="square dark-blue"></span>
+              <span className='square light-blue'></span>
+              <span className='square red'></span>
+              <span className='square white'></span>
             </div>
           </div>
       </div>
