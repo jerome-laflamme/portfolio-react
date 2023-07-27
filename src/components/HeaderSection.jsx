@@ -1,33 +1,37 @@
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import "../assets/main.css";
-import { useEffect, useState } from "react";
-import StopCircleIcon from '@mui/icons-material/StopCircle';
-import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+// import { useEffect, useState } from "react";
+// import StopCircleIcon from '@mui/icons-material/StopCircle';
+// import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 
 export default function HeaderSection() {
-  const [animatedText, setAnimatedText] = useState(true);
-  const toggleAnimation = () => {
-    setAnimatedText(!animatedText);
-  };
+  // const [animatedText, setAnimatedText] = useState(true);
+  // const toggleAnimation = () => {
+  //   setAnimatedText(!animatedText);
+  // };
 
-  const [showAnmiationToggle, setShowAnimationToggle] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolledToBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - window.innerHeight;
-      setShowAnimationToggle(isScrolledToBottom);
-    };
+  // const [showAnmiationToggle, setShowAnimationToggle] = useState(false);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const isScrolledToBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - window.innerHeight;
+  //     setShowAnimationToggle(isScrolledToBottom);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <header>
-      <div className="header-title-container">
+      <div className="main-text">
+        <h1>Port</h1>
+        <h1>folio</h1>
+      </div>
+      {/* <div className="header-title-container">
         {animatedText ? (
           <>
             <motion.div
@@ -94,7 +98,7 @@ export default function HeaderSection() {
         <div className="toggleAnimation-btn-container">
           <button className="toggleAnimation-btn" onClick={toggleAnimation}>Animation</button>
           {animatedText ? <StopCircleIcon fontSize="small" /> : <PlayCircleIcon fontSize="small" />}
-        </div>)}
+        </div>)} */}
 
     </header>
   );

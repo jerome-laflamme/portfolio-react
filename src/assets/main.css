@@ -1,16 +1,10 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Irish Grover', cursive;
-  color: var(--grey);
-}
 
-body {
-  overflow-x: hidden;
+@font-face {
+  font-family: "Wavy";
+  font-size: 400px;
+  src: url("font/ThewaveRegular-OVOe8.ttf") format("truetype");
 }
 
 /* colors */
@@ -25,14 +19,29 @@ body {
   scroll-behavior: smooth;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Irish Grover', cursive;
+  color: var(--grey);
+}
+
 h1 {
-  font-size: 2rem;
+
 }
 
 a {
   text-decoration: none;
   color: var(--grey);
 }
+
+
+body {
+  overflow-x: hidden;
+}
+
+
 
 button {
   border: none;
@@ -43,6 +52,32 @@ button {
 
 
 /* HEADER SECTION */
+
+header {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  display: block;
+  padding-bottom: calc(100% * (1642 / 1102));
+  background: url(./img/background-image.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.main-text h1 {
+  font-size: 30vw;
+  font-family: "Wavy", sans-serif;
+  font-weight: 100;
+  text-align: right;
+  color: var(--yellow);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
 
 .header-title-container {
   font-size: 2rem;
