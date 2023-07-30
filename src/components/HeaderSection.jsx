@@ -1,6 +1,6 @@
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "../assets/main.css";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import StopCircleIcon from '@mui/icons-material/StopCircle';
 // import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
@@ -25,11 +25,65 @@ export default function HeaderSection() {
   //   };
   // }, []);
 
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header>
       <div className="main-text">
-        <h1>Port</h1>
-        <h1>folio</h1>
+        <motion.h1
+          animate={{ y: scrollY * 0.5 }}
+          id="top">
+          Port
+        </motion.h1>
+        <motion.h1
+          animate={{
+            y: scrollY * 0.5,
+          }}
+          id="bottom">
+          folio
+        </motion.h1>
+      </div>
+      {/* <div className="main-text-duplicate">
+        <h1
+          animate={{ 
+            y: scrollY * 0.5,
+            delay: 0.5
+          }}
+          id="top">
+          Port
+        </h1>
+        <h1
+          id="bottom">
+          folio
+        </h1>
+      </div> */}
+      <div className="main-text-duplicate">
+        <motion.h1
+          animate={{
+            y: scrollY * 0.3,
+          }}
+          id="top"
+        >
+          Port
+        </motion.h1>
+        <motion.h1
+          animate={{
+            y: scrollY * 0.3,
+          }}
+          id="bottom">
+          folio
+        </motion.h1>
       </div>
       {/* <div className="header-title-container">
         {animatedText ? (

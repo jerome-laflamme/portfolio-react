@@ -64,10 +64,11 @@ export default function YellowSection() {
             mises pour me garder stimulé et intéressé.
           </p>
           <p className='bolder'>
-            Expérience : JS, TS, React, Vue, CSS, HMTL, Three.JS, C#, MySQL,
-            MongoDB, Node.JS, Blender, Figma, Photoshop, Illustrator, After
-            Effects, Premiere Pro
+            Expérience : React, Vue, CSS, HMTL,  C#, MySQL,
+            NoSQL, Node.JS, Blender, Figma, Photoshop, Lightroom
           </p>
+          {/* Three.JS,  Illustrator, After
+            Effects, Premiere Pro*/}
           <div className="color-palette-container">
             <span className="square dark-blue"></span>
             <span className='square light-blue'></span>
