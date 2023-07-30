@@ -40,7 +40,7 @@ export default function HeaderSection() {
 
   return (
     <header>
-      <div className="main-text">
+      <div className="main-animation-text">
         {/* HIDDEN ON TOP */}
         <motion.h1
           animate={{
@@ -101,6 +101,10 @@ export default function HeaderSection() {
           id="bottom">
           folio
         </motion.h1>
+        <h1>test</h1>
+      </div>
+      <div className="name-tag">
+        <h2>Jerome Laflamme</h2>
       </div>
 
     </header>
