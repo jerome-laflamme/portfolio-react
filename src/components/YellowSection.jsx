@@ -77,7 +77,7 @@ export default function YellowSection() {
             Effects, Premiere Pro*/}
           <div className="exp-container">
             <div className="exp">
-              <h3>La Croix Bleu</h3>
+              <h3>La Croix Bleue</h3>
               <p>Stagiare | Printemps 2023</p>
             </div>
             <div className="exp">
