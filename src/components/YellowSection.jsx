@@ -38,9 +38,15 @@ export default function YellowSection() {
   return (
     <div className="main-background">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        initial={{ 
+          opacity: 0,
+          x: -100
+          }}
+        animate={{ 
+          opacity: 1,
+          x: 0
+         }}
+        transition={{ duration: 1 }}
         className="info">
         <img alt="Me" src={me} />
         <div>
@@ -54,7 +60,7 @@ export default function YellowSection() {
           })}
         </div>
       </motion.div>
-      <div className="text-container">
+      <motion.div className="text-container">
         <h2>profil</h2>
         <hr />
         <div className='text-area'>
@@ -106,7 +112,7 @@ export default function YellowSection() {
             <motion.span className='square white'></motion.span>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div >
   );
 }
