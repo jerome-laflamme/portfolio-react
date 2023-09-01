@@ -215,3 +215,121 @@ p {
 .white {
   background-color: var(--white);
 }
+
+
+@media (max-width: 1700px) {
+  .main-animation-text h1 {
+      font-size:45vh
+  }
+
+  .name-tag h2 {
+      bottom: 100px
+  }
+
+  .play-btn {
+      display: none
+  }
+}
+
+@media (max-width: 1400px) {
+  .main-animation-text h1 {
+      font-size:45vh
+  }
+
+  .name-tag h2 {
+      bottom: 50px
+  }
+
+  .text-container {
+      padding: 5rem 3rem
+  }
+
+  img {
+      height: 300px;
+      width: 300px
+  }
+
+  .text-area>* {
+      margin: .5rem 0
+  }
+
+  .color-palette-container {
+      display: none
+  }
+}
+
+@media (max-width: 900px) {
+  .main-animation-text h1 {
+      font-size:25vh
+  }
+
+  #top {
+      top: 0
+  }
+
+  #bottom {
+      top: 25vh
+  }
+
+  .name-tag h2 {
+      bottom: 0
+  }
+
+  .text-container {
+      padding: 3rem
+  }
+
+  img {
+      height: 250px;
+      width: 250px
+  }
+
+  .text-area>* {
+      margin: .5rem 0
+  }
+
+  .color-palette-container {
+      display: none
+  }
+
+  .info {
+      margin-left: 0;
+      margin-right: 3rem
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+      height:100vh;
+      width: 100%
+  }
+
+  .main-animation-text h1 {
+      font-size: 20vh
+  }
+
+  .main-background {
+      flex-direction: column;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      margin-top: -20vh;
+      padding-top: 10vh
+  }
+
+  .info {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+      width: 100%
+  }
+
+  img {
+      margin-bottom: 20px
+  }
+
+  .text-container {
+      padding: 1rem;
+      width: 100%
+  }
+}

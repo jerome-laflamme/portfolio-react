@@ -13,6 +13,8 @@ export default function HeaderSection() {
     });
   }, []);
 
+  const isMobile = window.innerWidth < 768;
+
   return (
     <header>
       <div className="play-btn">
@@ -54,14 +56,6 @@ export default function HeaderSection() {
         {/* HIDDEN ON TOP */}
         <motion.h1
           animate={{
-            y: scrollY * 0.5,
-          }}
-          id="top-decal"
-        >
-          Port
-        </motion.h1>
-        <motion.h1
-          animate={{
             y: scrollY * 0.4,
           }}
           id="bottom-decal">
@@ -90,13 +84,13 @@ export default function HeaderSection() {
         >
           Port
         </motion.h1>
-        <motion.h1
+        { isMobile && <motion.h1
           animate={{
             y: scrollY * 0.3,
           }}
           id="bottom">
           folio
-        </motion.h1>
+        </motion.h1> }
       </div>
     </header>
   );
