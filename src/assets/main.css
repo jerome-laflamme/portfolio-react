@@ -212,13 +212,12 @@ p {
 .color-palette-container {
   display: flex;
   width: 100%;
-  justify-content: right;
-  margin-top: 5%;
+  margin-top: 95%;
 }
 
 .square {
-  width: 60px;
-  height: 40px;
+  width: 25%;
+  height: 5%;
 }
 
 .dark-blue {
@@ -237,6 +236,9 @@ p {
   background-color: var(--white);
 }
 
+
+
+/* MEDIA QUERIES */
 
 @media (max-width: 1700px) {
   .main-animation-text h1 {
