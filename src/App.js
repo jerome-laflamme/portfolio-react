@@ -1,14 +1,7 @@
-import HeaderSection from './components/HeaderSection';
-import YellowSection from './components/YellowSection';
-
+import Opening from './components/Opening';
 function App() {
   return (
-    <div >
-        <HeaderSection />
-      <main>
-        <YellowSection />
-      </main>
-    </div>
+   <Opening />
   );
 }
 
