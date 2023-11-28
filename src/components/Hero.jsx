@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import AnimatedIcon from "./AnimatedIcon";
+import AnimatedArrow from "./AnimatedArrow";
 import Name from "./Name";
 
 const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
@@ -32,7 +32,7 @@ const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
           </motion.span>
         ))}
       </motion.div>
-      <AnimatedIcon
+      <AnimatedArrow
         IconComponent={KeyboardArrowDownIcon}
         onClick={selectionMenuToggle}
         color={"black"}

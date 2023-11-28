@@ -1,16 +1,13 @@
 import { motion } from 'framer-motion';
 
-const AnimatedIcon = ({ IconComponent, onClick, color }) => {
-
-    const margin = IconComponent.type.render.displayName !== 'KeyboardArrowUpIcon' ? "3%" : "50%";
-    const bottom = IconComponent.type.render.displayName !== 'KeyboardArrowUpIcon' ? "0" : "0";
+const AnimatedArrow = ({ IconComponent, onClick, color }) => {
    return (
        <motion.p
            style={{
                position: "absolute",
-               bottom: bottom,
+               bottom: 0,
                left: "50%",
-               marginBottom: margin,
+               marginBottom: "5%",
                cursor: "pointer",
                zIndex: 1,
                color: color,
@@ -30,4 +27,4 @@ const AnimatedIcon = ({ IconComponent, onClick, color }) => {
    );
 };
 
-export default AnimatedIcon;
+export default AnimatedArrow;

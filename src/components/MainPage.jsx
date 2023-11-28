@@ -8,18 +8,17 @@ const MainPage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSelection, setShowSelection] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const phraseFontSize = (windowWidth / 1440) * 70;
   const nameFontSize = (windowWidth / 1440) * 50;
   const selectionFontSize = (windowWidth / 1440) * 80;
 
   const selectionMenuToggle = () => setShowSelection(!showSelection);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
