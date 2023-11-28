@@ -1,7 +1,7 @@
-import Opening from './components/Opening';
+import MainPage from './components/MainPage';
 function App() {
   return (
-   <Opening />
+   <MainPage />
   );
 }
 
