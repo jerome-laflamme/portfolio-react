@@ -15,7 +15,6 @@
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
   font-weight: 200;
-  overflow: hidden;
 }
 
 a {
@@ -85,3 +84,38 @@ p {
   z-index: 1;
   background-color: var(--white);
 }
+
+/* ABOUT */
+
+.me {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* GALLERY */
+
+.content-title {
+  margin: 5rem;
+  font-size: 2rem;
+
+}
+.content-images {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+  .content-image {
+    width: 20vw; /* This sets the width to 25% of the viewport width */
+    height: 20vw; /* This sets the height to 25% of the viewport width */
+    object-fit: cover; /* This ensures the image covers the entire area of the container */
+    margin: 30px;
+   }
+ 
+ 

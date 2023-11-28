@@ -12,21 +12,22 @@ const ContentComponent = ({ toggleCloseContent, pageContent }) => {
       {pageContent.title === "About" ? (
         <div className="about-container">
           <div className="about-content">
+            <img src={pageContent.photo} alt="me" className="me"/>
             <p className="about-title">{pageContent.title}</p>
-            <p className="about-description">{pageContent.description}</p>
+            <p className="about-text">{pageContent.text[0]}</p>
+            <p className="about-text">{pageContent.text[1]}</p>
           </div>
         </div>
       ) : (
-        <div className="content-container">
+        <div className="image-container">
           <div className="content">
             <p className="content-title">{pageContent.title}</p>
             <div className="content-images">
               {pageContent.images.map((image, index) => (
-                // eslint-disable-next-line jsx-a11y/img-redundant-alt
                 <img
                   key={index}
                   src={image}
-                  alt="content-image"
+                  alt={"content-image" + index}
                   className="content-image"
                 />
               ))}

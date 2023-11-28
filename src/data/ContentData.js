@@ -1,22 +1,25 @@
 import me from "../assets/img/me.jpg";
 import cv from "../assets/files/CV_EN.pdf";
 
+function importAll(r) {
+  return r.keys().map(r);
+ }
+ 
+ const photosDirectory = require.context('../assets/img/photos', false, /\.(png|jpe?g|svg)$/);
+ const photos = importAll(photosDirectory);
+ 
+ const drawingsDirectory = require.context('../assets/img/drawings', false, /\.(png|jpe?g|svg)$/);
+ const drawings = importAll(drawingsDirectory);
+ 
+
 const content = {
     photoContent :{
-        title: "Photo",
-        images: [
-          "https://images.unsplash.com/photo-1634135904710-0e2e4e1c6a9d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80",
-          "https://images.unsplash.com/photo-1634135904710-0e2e4e1c6a9d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80",
-          "https://images.unsplash.com/photo-1634135904710-0e2e4e1c6a9d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80",
-        ],
+        title: "Photos",
+        images: photos,
       },
       drawingCOntent : {
-        title: "Drawing",
-        images: [
-          "https://images.unsplash.com/photo-1634135904710-0e2e4e1c6a9d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80",
-          "https://images.unsplash.com/photo-1634135904710-0e2e4e1c6a9d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80",
-          "https://images.unsplash.com/photo-1634135904710-0e2e4e1c6a9d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80",
-        ],
+        title: "Drawings",
+        images: drawings, 
       },
       aboutContent : {
         title: "About",

@@ -17,8 +17,8 @@ const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              duration: 0.3,
-              delay: index * 0.05,
+              duration: 0.7,
+              delay: index * 0.07,
               ease: "easeInOut",
             }}
             style={{
