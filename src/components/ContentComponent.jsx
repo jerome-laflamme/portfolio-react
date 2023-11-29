@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import CloseIcon from "./CloseIconComponent";
+import me from "../assets/img/me.jpg";
 
 const ContentComponent = ({ toggleCloseContent, pageContent }) => {
   useEffect(() => {
@@ -15,7 +16,9 @@ const ContentComponent = ({ toggleCloseContent, pageContent }) => {
         <div className="about-container">
           <div className="about-content">
             <div className="left">
-              <img src={pageContent.photo} alt="me" className="me" />
+              <div className="me">
+                <img alt="me" src={me}/>
+              </div>
             </div>
             <div className="right">
               <p className="about-title">{pageContent.title}</p>
@@ -35,14 +38,16 @@ const ContentComponent = ({ toggleCloseContent, pageContent }) => {
       ) : (
         <div className="content">
           <p className="content-title">{pageContent.title}</p>
-          <div className="content-images">
+          <div className="image-wrapper">
             {pageContent.images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={"content-image" + index}
-                className="content-image"
-              />
+              <div className="image-container">
+                <img
+                  key={index}
+                  src={image}
+                  alt={"image" + index}
+                  className="image"
+                />
+              </div>
             ))}
           </div>
         </div>

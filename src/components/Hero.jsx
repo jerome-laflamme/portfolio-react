@@ -5,7 +5,7 @@ import AnimatedArrow from "./AnimatedArrow";
 import Name from "./Name";
 
 const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
-  const text = "portfoliopor tfolioportfo lioportfoliop ortfoliopor tfolioportf olioportfolioportfolio";
+  const text = "portfoliopor tfolioportfo lioportfoliop ortfoliopor tfolioportf olioportfolio portfolioport folioportfoli oportfoliopor tfolioport folioportfo lio portfol ioportfoliopor tfolioportfolio";
 
   return (
     <div className="hero-container">
