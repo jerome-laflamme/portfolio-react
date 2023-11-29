@@ -5,7 +5,7 @@ function importAll(r) {
   return r.keys().map(r);
  }
  
- const photosDirectory = require.context('../assets/img/photos', false, /\.(png|jpe?g|svg)$/);
+ const photosDirectory = require.context('../assets/img/photos', false, /\.(png|jpe?g|JPG|svg)$/);
  const photos = importAll(photosDirectory);
  
  const drawingsDirectory = require.context('../assets/img/drawings', false, /\.(png|jpe?g|svg)$/);
@@ -26,7 +26,7 @@ const content = {
         photo: me,
         text: [
           "TRAINED as a full-stack developer, I am self-sufficient and naturally curious. With a strong blend of creativity and logic, I learn quickly and proactively. Challenges are essential to keep me stimulated and engaged.",
-          "THIS page was created as a project so I can show the people who are interested my art, design and development abilities.",
+          "THIS React website was created as a side project so I can show the people who are interested my art, design and development abilities.",
           "Download my resume here:",
         ],
         resume: cv,

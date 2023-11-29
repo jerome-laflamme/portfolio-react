@@ -5,7 +5,7 @@ import AnimatedArrow from "./AnimatedArrow";
 import Name from "./Name";
 
 const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
-  const text = "a cosmic wink in an infinite, whimsical universe's eye";
+  const text = "portfoliopor tfolioportfo lioportfoliop ortfoliopor tfolioportf olioportfolioportfolio";
 
   return (
     <div className="hero-container">
@@ -17,7 +17,7 @@ const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              duration: 0.7,
+              duration: 0.3,
               delay: index * 0.07,
               ease: "easeInOut",
             }}
