@@ -61,9 +61,6 @@ p {
   z-index: 0;
 }
 
-.phrase {
-  height: 70vh;
-}
 
 @media screen and (max-width: 768px) {
   

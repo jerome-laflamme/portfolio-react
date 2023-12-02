@@ -7,7 +7,7 @@ const AnimatedArrow = ({ IconComponent, onClick, color }) => {
                position: "absolute",
                bottom: 0,
                left: "50%",
-               marginBottom: "5%",
+               marginBottom: "10px",
                cursor: "pointer",
                zIndex: 1,
                color: color,

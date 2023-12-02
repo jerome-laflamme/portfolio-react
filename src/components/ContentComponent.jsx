@@ -1,14 +1,7 @@
-import React, { useEffect } from "react";
 import CloseIcon from "./CloseIconComponent";
 import me from "../assets/img/me.jpg";
 
 const ContentComponent = ({ toggleCloseContent, pageContent }) => {
-  useEffect(() => {
-    if (pageContent.images) {
-      console.log(pageContent.images);
-    }
-  }, [pageContent]);
-
   return (
     <div>
       <CloseIcon toggleCloseContent={toggleCloseContent} />
@@ -40,9 +33,8 @@ const ContentComponent = ({ toggleCloseContent, pageContent }) => {
           <p className="content-title">{pageContent.title}</p>
           <div className="image-wrapper">
             {pageContent.images.map((image, index) => (
-              <div className="image-container">
+              <div className="image-container"  key={index}>
                 <img
-                  key={index}
                   src={image}
                   alt={"image" + index}
                   className="image"

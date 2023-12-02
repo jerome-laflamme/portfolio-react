@@ -5,7 +5,7 @@ import AnimatedArrow from "./AnimatedArrow";
 import Name from "./Name";
 
 const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
-  const text = "portfoliopor tfolioportfo lioportfoliop ortfoliopor tfolioportf olioportfolio portfolioport folioportfoli oportfoliopor tfolioport folioportfo lio portfol ioportfoliopor tfolioportfolio";
+  const text = "portfoliopor tfolioportfo lioportfoliop ortfoliopor tfolioportf olioportfolio   ";
 
   return (
     <div className="hero-container">
@@ -17,8 +17,8 @@ const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              duration: 0.3,
-              delay: index * 0.07,
+              duration: 0.5,
+              delay: index * 0.05,
               ease: "easeInOut",
             }}
             style={{

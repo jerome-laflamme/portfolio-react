@@ -8,7 +8,7 @@ function importAll(r) {
  const photosDirectory = require.context('../assets/img/photos', false, /\.(png|jpe?g|JPG|svg)$/);
  const photos = importAll(photosDirectory);
  
- const drawingsDirectory = require.context('../assets/img/drawings', false, /\.(png|jpe?g|svg)$/);
+ const drawingsDirectory = require.context('../assets/img/drawings', false, /\.(png|jpe?g|JPG|svg)$/);
  const drawings = importAll(drawingsDirectory);
  
 
