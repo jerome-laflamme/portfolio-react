@@ -4,9 +4,9 @@
 :root {
   scroll-behavior: smooth;
 
-  --primary-color: #6ca7ff;
+  --primary-color: #00ff22;
   --white: #fff;
-  --black: #000;
+  --black: #070e13;
 }
 
 * {
@@ -48,6 +48,16 @@ p {
   text-transform: uppercase;
 }
 
+a {
+  color: var(--black);
+  font-weight: bolder;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
 
 /* HERO */
 
@@ -82,6 +92,7 @@ p {
 .selection-container p {
   color: var(--white);
   transition: 0.3s ease-in-out;
+ 
 }
 
 .selection-container p:hover {
@@ -97,6 +108,14 @@ p {
   background-color: var(--white);
 }
 
+.menu {
+  height: 50vh;
+}
+
+
+.menu p {
+  margin-bottom: -3rem;
+}
 
 
 /* GALLERY */
@@ -130,8 +149,17 @@ p {
   object-fit: contain; /* To maintain the aspect ratio */
 }
 @media screen and (max-width: 768px) {
+  .menu p {
+    margin-bottom: 1rem
+  }
+  
+  .content-title {
+    margin: 1rem;
+  }
+
   .image-wrapper {
     width: 95%;
+    height: 80vh;
   }
   
   .image-container {
@@ -161,13 +189,22 @@ p {
   width: 65%;
 }
 
+.resume {
+  width: 95%;
+  display: flex;
+  justify-content: right;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+
 .me {
   width: 100%;
   padding-top: 100%; 
   border-radius: 50%;
   border: 5px solid rgb(204, 204, 204);
   box-sizing: border-box;
-  background: url('./img/me.jpg') no-repeat center center/cover;
+  background: url('./img/me.webp') no-repeat center center/cover;
   position: relative;
 }
 
@@ -187,9 +224,32 @@ p {
 .about-text {
   text-transform: none;
   margin-bottom: 2rem;
-  font-size: 1.4rem;
-  line-height: 2.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
   padding: 0 2rem;
+}
+
+.contact-section {
+  margin-top: 3rem;
+  margin-left: 0.8rem;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
+
+.inline img {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  filter: grayscale(100%);
+}
+
+.inline p {
+  margin-bottom: 0;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 850px) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import ContentData from "../data/ContentData";
@@ -6,12 +6,7 @@ import ContentData from "../data/ContentData";
 import Name from "./Name";
 import ContentComponent from "./ContentComponent";
 
-
-const SelectionMenu = ({
-  showSelection,
-  selectionFontSize,
-  nameFontSize,
-}) => {
+const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
   const selectionOptions = ["Photo", "Drawing", "About"];
 
   const [showContent, setShowContent] = useState(false);
@@ -37,7 +32,7 @@ const SelectionMenu = ({
         break;
     }
   };
-  
+
   const toggleCloseContent = () => setShowContent(false);
 
   return (
@@ -52,26 +47,24 @@ const SelectionMenu = ({
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
             <Name nameFontSize={nameFontSize} nameColor={"white"} />
-            {selectionOptions.map((option, index) => (
-              <motion.p
-                key={index}
-                style={{
-                  fontSize: selectionFontSize,
-                  fontWeight: 100,
-                  cursor: "pointer",
-                  padding: "0.5rem",
-                  marginLeft: "10%",
-                  width: "min-content",
-                  letterSpacing: "0.3em",
-                }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                onClick={showMagic}
-              >
-                {option}
-              </motion.p>
-            ))}
+            <div className="menu">
+              {selectionOptions.map((option, index) => (
+                <motion.p
+                  key={index}
+                  style={{
+                    fontSize: selectionFontSize,
+                    fontWeight: 100,
+                    cursor: "pointer",
+                    marginLeft: "10%",
+                    width: "min-content",
+                  }}
+                  onClick={showMagic}
+                  whileHover={{ scale: 1.1, translateX: 30, color: "#00ff22" }}
+                >
+                  {option}
+                </motion.p>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -84,11 +77,10 @@ const SelectionMenu = ({
             exit={{ y: "100vh" }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
-          <ContentComponent
-            toggleCloseContent={toggleCloseContent}
-            pageContent={pageContent}
-          />
-           
+            <ContentComponent
+              toggleCloseContent={toggleCloseContent}
+              pageContent={pageContent}
+            />
           </motion.div>
         )}
       </AnimatePresence>

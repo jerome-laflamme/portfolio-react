@@ -1,5 +1,6 @@
 import CloseIcon from "./CloseIconComponent";
-import me from "../assets/img/me.jpg";
+import me from "../assets/img/me.webp";
+import resume from "../assets/files/CV_EN.pdf";
 
 const ContentComponent = ({ toggleCloseContent, pageContent }) => {
   return (
@@ -10,21 +11,34 @@ const ContentComponent = ({ toggleCloseContent, pageContent }) => {
           <div className="about-content">
             <div className="left">
               <div className="me">
-                <img alt="me" src={me}/>
+                <img alt="me" src={me} />
+              </div>
+              <div className="contact-section">
+                {Object.entries(pageContent.contact).map(
+                  ([key, value], index) => {
+                    return (
+                      <div className="inline" key={index}>
+                        <img
+                          src={value.icon}
+                          alt={value.icon}
+                          className="contact-icon"
+                        ></img>
+                        <a href={value.url} className="contact-text">
+                          {value.text}
+                        </a>
+                      </div>
+                    );
+                  }
+                )}
               </div>
             </div>
             <div className="right">
               <p className="about-title">{pageContent.title}</p>
               <p className="about-text">{pageContent.text[0]}</p>
               <p className="about-text">{pageContent.text[1]}</p>
-              {/* <div className="contact-section">
-                {pageContent.contact.map((info, index) => (
-                  <div className="inline" key={index}>
-                    <p className="contact-text">{info.icon}</p>
-                    <p className="contact-title">{info.text}</p>
-                  </div>
-                ))}
-              </div> */}
+              <div className="resume">
+                <a href={resume}>Download my resume</a>
+              </div>
             </div>
           </div>
         </div>
@@ -33,12 +47,8 @@ const ContentComponent = ({ toggleCloseContent, pageContent }) => {
           <p className="content-title">{pageContent.title}</p>
           <div className="image-wrapper">
             {pageContent.images.map((image, index) => (
-              <div className="image-container"  key={index}>
-                <img
-                  src={image}
-                  alt={"image" + index}
-                  className="image"
-                />
+              <div className="image-container" key={index}>
+                <img src={image} alt={"image" + index} className="image" />
               </div>
             ))}
           </div>

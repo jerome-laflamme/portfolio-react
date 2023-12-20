@@ -13,7 +13,7 @@ const CloseIconComponent = ({ toggleCloseContent }) => {
         cursor: "pointer",
         zIndex: 2,
       }}
-      whileHover={{ rotate: 180, color: "#6ca7ff" }}
+      whileHover={{ rotate: 180, color: "#00ff22" }}
       transition={{ duration: 0.4 }}
       onClick={toggleCloseContent}
     >
