@@ -119,7 +119,7 @@ a:hover {
 
 
 /* GALLERY */
-.content-title {
+.gallery-title {
   margin: 5rem;
   font-size: 2rem;
 }
@@ -129,31 +129,90 @@ a:hover {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* To space the images evenly */
+  justify-content: space-around; 
   overflow-y: scroll;
   height: 60vh;
 }
 
 .image-container {
   width: 30%;
-  height: 30vw; /* To maintain the aspect ratio */
+  height: 30vw;
   object-fit: cover;
   margin: 10px;
   border: #f1f1f1  1px solid;
   padding: 3rem;
 }
 
+.image-container:hover {
+  cursor: pointer;
+}
+
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* To maintain the aspect ratio */
+  object-fit: contain; 
 }
+
+.image-enlarged {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.image-enlarged img {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.image-enlarged img:hover {
+  cursor: pointer;
+}
+
+.instruction {
+  position: fixed;
+  bottom: 0;
+  left: 20;
+  width: 90%;
+  height: 10vh;
+  z-index: 2;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  padding: 1%;
+  background-color: white;
+ }
+ 
+ .arrow-left {
+  left: 2%;
+ }
+ 
+ .arrow-right {
+  right: 2%;
+ }
+
 @media screen and (max-width: 768px) {
   .menu p {
     margin-bottom: 1rem
   }
   
-  .content-title {
+  .gallery-title {
     margin: 1rem;
   }
 
@@ -166,6 +225,14 @@ a:hover {
     width: 100%;
     height: 50vh;
     padding: 0.5rem;
+  }
+
+  .image-enlarged {
+    padding: 0.5rem;
+  }
+
+  .image-enlarged img:hover {
+    cursor: pointer;
   }
 
 }
@@ -230,8 +297,8 @@ a:hover {
 }
 
 .contact-section {
-  margin-top: 3rem;
-  margin-left: 0.8rem;
+  margin: 3rem 0;
+  margin-left: 2rem;
 }
 
 .inline {
@@ -265,8 +332,7 @@ a:hover {
   }
 
   .left {
-    width: 50%;
-    margin: 1rem;
+    width: 70%;
   }
 
   .right {
@@ -274,7 +340,7 @@ a:hover {
   }
 
   .me {
-    margin: 2rem auto;
+    text-align: center;
   }
 
   .about-title {
@@ -286,6 +352,10 @@ a:hover {
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 0 1rem;
+  }
+
+  .resume {
+    display: none;
   }
   
 }

@@ -30,12 +30,12 @@ const content = {
         resume: cv,
         contact: {
           email: {
-            text: "jerome@jlaflamme.com",
+            text: "email",
             url: "mailto:jerome@jlaflamme.com",
             icon: "https://img.icons8.com/fluency/48/000000/email-open.png",
           },
           github: {
-            text: "github.com/jerome-laflamme",
+            text: "github",
             url: "https://github.com/jerome-laflamme",
             icon: "https://img.icons8.com/fluency/48/000000/github.png",
           },
