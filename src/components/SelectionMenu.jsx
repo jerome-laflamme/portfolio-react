@@ -7,10 +7,10 @@ import Name from "./Name";
 import ContentComponent from "./ContentComponent";
 
 const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
-  const selectionOptions = ["Photo", "Drawing", "About"];
+  const selectionOptions = ["Photo", "Drawing", "film", "About"];
 
   const [showContent, setShowContent] = useState(false);
-  const [pageContent, setPageContent] = useState({}); // [images, videos, gifs]
+  const [pageContent, setPageContent] = useState({});
 
   const showMagic = (e) => {
     switch (e.target.innerText) {
@@ -20,6 +20,10 @@ const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
         break;
       case "DRAWING":
         setPageContent(ContentData.drawingCOntent);
+        setShowContent(true);
+        break;
+      case "FILM":
+        setPageContent(ContentData.videoContent);
         setShowContent(true);
         break;
       case "ABOUT":
@@ -54,12 +58,10 @@ const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
                   style={{
                     fontSize: selectionFontSize,
                     fontWeight: 100,
-                    cursor: "pointer",
                     marginLeft: "10%",
                     width: "min-content",
                   }}
                   onClick={showMagic}
-                  whileHover={{ scale: 1.1, translateX: 30, color: "#00ff22" }}
                 >
                   {option}
                 </motion.p>
