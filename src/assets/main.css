@@ -255,6 +255,7 @@ a:hover {
   width: 80%;
   margin: auto;
   height: 60vh;
+  overflow-y: scroll;
 }
 
 .short-container {

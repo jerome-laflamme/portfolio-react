@@ -24,9 +24,9 @@ const content = {
         title: "film",
         videos: [
           {
-            title: "Journal",
+            title: "journal",
             embedId: "2wtfQMTPnY0",
-          },
+          }
         ],
       },
       aboutContent : {
