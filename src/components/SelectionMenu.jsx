@@ -57,7 +57,6 @@ const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
                   key={index}
                   style={{
                     fontSize: selectionFontSize,
-                    fontWeight: 100,
                     marginLeft: "10%",
                     width: "min-content",
                   }}

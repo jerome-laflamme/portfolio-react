@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400;700&display=swap");
 
 /* colors */
 :root {
   scroll-behavior: smooth;
 
-  --primary-color: #00ff22;
+  --primary-color: #bbff00;
   --white: #fff;
   --black: #070e13;
 }
@@ -89,15 +89,6 @@ a:hover {
   height: 100vh;
 }
 
-.selection-container p {
-  color: var(--white);
-  transition: 0.3s ease-in-out;
- 
-}
-
-.selection-container p:hover {
-  color: var(--primary-color);
-}
 
 .content-container {
   position: absolute;
@@ -114,13 +105,16 @@ a:hover {
 
 .menu p {
   line-height: 8rem;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease;
+  color: white;
+  font-weight: 100;
 }
 
 .menu p:hover {
   color: var(--primary-color);
   cursor: pointer;
   transform: scale(1.1) translatex(1rem);
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
