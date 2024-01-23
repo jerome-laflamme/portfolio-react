@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SelectionMenu from "./SelectionMenu";
 import Hero from "./Hero";
 
-import "../assets/main.css";
+import "../../assets/main.css";
 
 const MainPage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

@@ -12,6 +12,16 @@ function importAll(r) {
  
 
 const content = {
+    webDesignContent : {
+      title: "Web Design",
+      projects: [
+        {
+          title: "JLAFLAMME.COM",
+          description: "This website was created with React and Bootstrap.",
+          image: "https://img.icons8.com/fluency/48/000000/react.png",
+        },
+      ],
+    },
     photoContent :{
         title: "Photo",
         images: photos,

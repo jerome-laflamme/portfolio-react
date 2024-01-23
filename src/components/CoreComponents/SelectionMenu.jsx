@@ -1,19 +1,23 @@
 import React, {  useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import ContentData from "../data/ContentData";
+import ContentData from "../../data/ContentData";
 
-import Name from "./Name";
-import ContentComponent from "./ContentComponent";
+import Name from "../Name";
+import ContentComponent from "../ContentComponent";
 
 const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
-  const selectionOptions = ["Photo", "Drawing", "film", "About"];
+  const selectionOptions = ["Web Design", "Photo", "Drawing", "film", "About"];
 
   const [showContent, setShowContent] = useState(false);
   const [pageContent, setPageContent] = useState({});
 
   const showMagic = (e) => {
     switch (e.target.innerText) {
+      case "WEB DESIGN": 
+        setPageContent(ContentData.webDesignContent);
+        setShowContent(true);
+        break;
       case "PHOTO":
         setPageContent(ContentData.photoContent);
         setShowContent(true);
@@ -58,7 +62,8 @@ const SelectionMenu = ({ showSelection, selectionFontSize, nameFontSize }) => {
                   style={{
                     fontSize: selectionFontSize,
                     marginLeft: "10%",
-                    width: "min-content",
+                    width: "1000px",
+                    lineHeight: "1em",
                   }}
                   onClick={showMagic}
                 >

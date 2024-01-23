@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import AnimatedArrow from "./AnimatedArrow";
-import Name from "./Name";
+import AnimatedArrow from "../AnimatedArrow";
+import Name from "../Name";
 
 const Hero = ({ phraseFontSize, selectionMenuToggle, nameFontSize }) => {
   const text = "portfoliopor tfolioportfo lioportfoliop ortfoliopor tfolioportf olioportfolio   ";
