@@ -1,5 +1,8 @@
 import cv from "../assets/files/CV_EN.pdf";
 
+// import thumbnails
+import donut from "../assets/img/thumbnails/donut.png";
+
 function importAll(r) {
   return r.keys().map(r);
  }
@@ -11,28 +14,29 @@ function importAll(r) {
  const drawings = importAll(drawingsDirectory);
  
 
+
 const content = {
     webDesignContent : {
       title: "Web Design",
-      projects: [
+      content: [
         {
-          title: "JLAFLAMME.COM",
-          description: "This website was created with React and Bootstrap.",
-          image: "https://img.icons8.com/fluency/48/000000/react.png",
+          title: "Animated Donut",
+          thumbnail: donut,
+          url: "https://my.spline.design/untitled-8520b7bd7c284617a0615a10e1a4cacb/",
         },
       ],
     },
     photoContent :{
         title: "Photo",
-        images: photos,
+        content: photos,
       },
       drawingCOntent : {
         title: "Drawing",
-        images: drawings, 
+        content: drawings, 
       },
       videoContent : {
-        title: "film",
-        videos: [
+        title: "Film",
+        content: [
           {
             title: "journal",
             embedId: "2wtfQMTPnY0",
